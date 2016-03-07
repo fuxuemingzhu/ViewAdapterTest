@@ -31,6 +31,14 @@ And it shows how to use these three views in Android.
 
 [GankMeizhi](https://github.com/xingrz/GankMeizhi) offers how to using the appbar.
 
+[Okhttp-utils](https://github.com/hongyangAndroid/okhttp-utils) offers how to get the server information.
+
+[Butterknife](https://github.com/JakeWharton/butterknife)
+
+[Picasso](https://github.com/square/picasso)
+
+[FastJson](https://github.com/alibaba/fastjson)
+
 ## Licence
 
 > Copyright 2016 Fuxuemingzhu
