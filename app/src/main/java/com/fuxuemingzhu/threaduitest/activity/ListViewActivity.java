@@ -1,6 +1,7 @@
 package com.fuxuemingzhu.threaduitest.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -32,14 +33,20 @@ public class ListViewActivity extends BaseActivity {
     ListView content;
 
 
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+
     private BaseAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_llistview);
+        setContentView(R.layout.activity_listview);
         ButterKnife.bind(this);
+
+        initViews();
+        initEvents();
 
         urls = new ArrayList<>();
         OkHttpUtils
@@ -78,7 +85,7 @@ public class ListViewActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
-
+        toolbar.setTitle("ListView");
     }
 
     @Override

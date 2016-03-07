@@ -3,6 +3,7 @@ package com.fuxuemingzhu.threaduitest.activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -28,6 +29,9 @@ public class RecyclerViewActivity extends BaseActivity {
     private List<String> urls;
     private String url = "http://gank.io/api/random/data/福利/20";
 
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,7 @@ public class RecyclerViewActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
+        toolbar.setTitle("RecyclerView");
         rv_recyclerview.setLayoutManager(new LinearLayoutManager(this));//这里用线性显示 类似于listview
         urls = new ArrayList<>();
         OkHttpUtils

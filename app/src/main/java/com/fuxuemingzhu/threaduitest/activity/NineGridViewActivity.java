@@ -2,6 +2,7 @@ package com.fuxuemingzhu.threaduitest.activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -27,6 +28,10 @@ public class NineGridViewActivity extends BaseActivity {
     @Bind(R.id.ngiv_nine_grid)
     NineGridImageView<String> nine_grid;
 
+
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+
     private String url = "http://gank.io/api/random/data/福利/8";
     private List<String> urls_list;
 
@@ -42,6 +47,7 @@ public class NineGridViewActivity extends BaseActivity {
     @Override
     protected void initViews() {
         urls_list = new ArrayList<>();
+        toolbar.setTitle("NineGridView");
     }
 
     @Override
