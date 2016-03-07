@@ -1,7 +1,7 @@
 package com.fuxuemingzhu.threaduitest.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -44,7 +44,8 @@ public class RecyclerViewActivity extends BaseActivity {
     @Override
     protected void initViews() {
         toolbar.setTitle("RecyclerView");
-        rv_recyclerview.setLayoutManager(new LinearLayoutManager(this));//这里用线性显示 类似于listview
+        //rv_recyclerview.setLayoutManager(new LinearLayoutManager(this));//这里用线性显示 类似于listview
+        rv_recyclerview.setLayoutManager(new GridLayoutManager(this, 2));
         urls = new ArrayList<>();
         OkHttpUtils
                 .get()

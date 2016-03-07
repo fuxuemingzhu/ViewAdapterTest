@@ -29,8 +29,8 @@ public class ListViewActivity extends BaseActivity {
 
     private String url = "http://gank.io/api/random/data/福利/20";
 
-    @Bind(R.id.content)
-    ListView content;
+    @Bind(R.id.lv_listview)
+    ListView listview;
 
 
     @Bind(R.id.toolbar)
@@ -80,7 +80,8 @@ public class ListViewActivity extends BaseActivity {
         }
         adapter = new ListViewAdapter(ListViewActivity.this, urls);
         Log.i("urls", urls.toString());
-        content.setAdapter(adapter);
+        listview.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 
     @Override
