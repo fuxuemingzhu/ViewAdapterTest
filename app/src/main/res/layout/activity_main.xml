@@ -28,7 +28,7 @@
             android:layout_below="@+id/btn_main_listview"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
-            android:text="RecycleView加载页面"
+            android:text="RecyclerView加载页面"
             android:textSize="20sp"/>
 
         <Button

@@ -32,7 +32,7 @@ public class NineGridViewActivity extends BaseActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
-    private String url = "http://gank.io/api/random/data/福利/8";
+    private String url = "http://gank.io/api/random/data/福利/9";
     private List<String> urls_list;
 
     @Override
@@ -103,6 +103,7 @@ public class NineGridViewActivity extends BaseActivity {
         @Override
         protected void onItemImageClick(Context context, int index, List list) {
             super.onItemImageClick(context, index, list);
+            Toast.makeText(context, "" + index, Toast.LENGTH_LONG).show();
         }
 
     };

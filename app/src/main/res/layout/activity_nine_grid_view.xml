@@ -7,15 +7,6 @@
                                                  android:fitsSystemWindows="true"
                                                  tools:context=".activity.NineGridViewActivity">
 
-    <com.jaeger.ninegridimageview.NineGridImageView
-        android:id="@+id/ngiv_nine_grid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:layout_marginTop="30dp"
-        app:imgGap="4dp"
-        app:showStyle="fill"
-        app:singleImgSize="120dp"/>
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -32,4 +23,12 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <com.jaeger.ninegridimageview.NineGridImageView
+        android:id="@+id/ngiv_nine_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:imgGap="4dp"
+        app:showStyle="fill"
+        app:singleImgSize="120dp"/>
 </android.support.design.widget.CoordinatorLayout>

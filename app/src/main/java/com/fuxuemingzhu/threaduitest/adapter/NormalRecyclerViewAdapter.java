@@ -2,11 +2,11 @@ package com.fuxuemingzhu.threaduitest.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.fuxuemingzhu.threaduitest.R;
 import com.squareup.picasso.Picasso;
@@ -62,13 +62,14 @@ public class NormalRecyclerViewAdapter extends RecyclerView.Adapter<NormalRecycl
         @Bind(R.id.picture)
         ImageView mPicture;
 
-        NormalImageHolder(View view) {
+        NormalImageHolder(final View view) {
             super(view);
             ButterKnife.bind(this, view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.d("NormalTextViewHolder", "onClick--> position = " + getPosition());
+                    Toast.makeText(view.getContext(), "onClick--> position = " + getPosition(), Toast
+                            .LENGTH_SHORT).show();
                 }
             });
         }

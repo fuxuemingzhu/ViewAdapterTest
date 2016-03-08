@@ -1,8 +1,9 @@
 package com.fuxuemingzhu.threaduitest.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
@@ -45,7 +46,8 @@ public class RecyclerViewActivity extends BaseActivity {
     protected void initViews() {
         toolbar.setTitle("RecyclerView");
         //rv_recyclerview.setLayoutManager(new LinearLayoutManager(this));//这里用线性显示 类似于listview
-        rv_recyclerview.setLayoutManager(new GridLayoutManager(this, 2));
+        //rv_recyclerview.setLayoutManager(new GridLayoutManager(this, 2));
+        rv_recyclerview.setLayoutManager(new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));//这里用线性宫格显示 类似于瀑布流
         urls = new ArrayList<>();
         OkHttpUtils
                 .get()
